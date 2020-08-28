@@ -7,7 +7,7 @@
     "node": "10.0.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.3",

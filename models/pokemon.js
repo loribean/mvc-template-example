@@ -32,7 +32,30 @@ module.exports = (dbPoolInstance) => {
     });
   };
 
+  let getAllStudents = (callback)=>{
+      let query = 'SELECT * FROM students'
+
+      dbPoolInstance.query(query,(err,result)=>{
+        callback(err,result)
+      })
+  }
+
+  let getIndividualStudent = (id, callback) => {
+
+    let query = 'SELECT * FROM students WHERE id=$1 AND name=$2'
+    let parameters = [
+      id,
+      'Arwa'
+    ]
+
+    dbPoolInstance.query(query,parameters,(err,result)=>{
+      callback(err,result)
+    })
+  }
+
   return {
-    getAll:getAll,
+    getAll,
+    getAllStudents,
+    getIndividualStudent
   };
 };
