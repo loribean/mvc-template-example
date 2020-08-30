@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+body { background: linear-gradient(to bottom, #238999, #313C60);
+ }
+
+ h3{
+	color: green;
+}
+
+.tuna {
+  background: url('http://stash.rachelnabors.com/img/codepen/sprite_tuna_boss.png?1') 0 0 no-repeat;
+  position: relative;
+  height: 200px;
+  width: 75px;
+}
+
+.tuna:after {
+  content: "";
+  animation: like-a-boss .5s steps(1, start) infinite;
+  background: url('http://stash.rachelnabors.com/img/codepen/sprite_tuna_boss.png?1') 0 -200px no-repeat;
+  position: absolute;
+  top: 44px; left: 19px;
+  width: 44px; height: 26px;
+  z-index: 2;
+}
+
+/*@keyframes like-a-boss {
+  0% { background-position: 0 -252px; }
+  33% { background-position: 0 -252px; }
+  66% { background-position: 0 -200px; }
+  100% { background-position: 0 -226px; } /* shows nothing
+*/
